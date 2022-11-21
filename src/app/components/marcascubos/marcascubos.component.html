@@ -1,0 +1,12 @@
+<h1>Marcas Cubos</h1>
+<div style="display: flex; margin: 0 auto;">
+<div class="card" style="width: 20rem; margin-right: 100px;" *ngFor="let mar of marcas">
+    <img src="{{mar.imagen}}" class="card-img-top" width="100px" height="250px">
+    <div class="card-body">
+    <h4 class="card-title">{{mar.nombre}}</h4>
+    <h6 class="card-subtitle mb-2 text-muted">{{mar.marca}}</h6>
+    <p class="card-text"><b>Precio: {{mar.precio}}€</b></p>
+    <a [routerLink]="['/comentario', mar.idCubo]" id="botonDetalles" class="btn border-primary">Detalles</a>
+    </div>
+</div>
+</div>
